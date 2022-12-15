@@ -11,6 +11,7 @@ module.exports = {
     devtool: 'inline-source-map',
     devServer: {
         static: './dist',
+        historyApiFallback: true,
     },
     module: {
         rules: [{
@@ -30,7 +31,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html'
+            template: './index.html'
         })
     ]
 }
